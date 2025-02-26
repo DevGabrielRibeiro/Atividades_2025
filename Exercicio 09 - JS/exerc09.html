@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="exerc09.js" defer></script>
+    <link rel="stylesheet" href="exerc09.css">
+    <title>Clube - Taxa de Entrada</title>
+</head>
+
+<body>
+    <h1>Exercício 9</h1>
+    
+    <div class="container">
+        <h2>Clube de Associados</h2>
+        
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" placeholder="Digite sua idade">
+
+        <label for="carteirinha">Possui carteirinha?</label>
+        <select name="carteirinha" id="carteirinha">
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+        
+        <button onclick="calcularTaxa()">Calcular Taxa</button>
+        
+        <div class="result" id="resultado" style="display: none;"></div>
+    </div>
+</body>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="exerc08.js" defer></script>
+    <link rel="stylesheet" href="exerc08.css">
+    <title>Exercício 8</title>
+</head>
+
+<body>
+    <h1 id="text1">Exercício 8</h1>
+    <div class="container">
+        <h2 id="text2">Realizar operações de dois números</h2>
+
+            <label for="numero1">Digite o primeiro número:</label>
+            <input type="text" id="numero1" placeholder="Primeiro número" required><br>
+
+            <label for="numero2">Digite o segundo número:</label>
+            <input type="text" id="numero2" placeholder="Segundo número" required><br>
+
+        <button onclick="exibirResultados()">Realizar Cálculos</button>
+        
+        <div id="resultado" class="result" style="display: none;">
+            A soma é: <span id="soma"></span><br>
+            A subtração é: <span id="subtracao"></span><br>
+            A multiplicação é: <span id="multiplicacao"></span><br>
+            A divisão é: <span id="divisao"></span>
+        </div>
+    </div>
+</body>
+
+</html>
