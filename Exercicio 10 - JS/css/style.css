@@ -1,22 +1,117 @@
-* {
-    padding: 0;
-    margin: 0;
-}
+/* Estilos gerais */
 
+/*Página Index*/
 body {
-    background-color: rgb(216, 214, 214);
-
+    font-family: Arial, sans-serif;
+    background-color: #f0f1f1;
+    margin: 0;
+    padding: 0;
 }
 
-.logo {
+header a {
     display: flex;
-    background-color: bisque;
-    padding: 10px;
     justify-content: center;
     align-items: center;
+    background-color: rgb(230, 227, 226);
 }
 
-#logo_img {
+header a{
+    align-items: center;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header img {
     width: 200px;
-    height: 200px;
+    height: auto;
+}
+
+.container-produtos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Cartões de produtos */
+.card {
+    background-color:rgb(230, 227, 226);
+    width: 18rem;
+    margin: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    padding: 20px;
+}
+
+.card img {
+    width: 300px;
+    height: auto;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #d6dbcf;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #9cf163;
+    
+}
+
+/*Página Produto 1*/
+
+.container-card {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+    background-color:rgb(230, 227, 226);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.produto-title {
+    font-size: 40px;
+    padding: 5px;
+}
+
+.produto-preco{
+    font-size: 40px;
+    padding: 5px;
+}
+
+.btn-comprar{
+    width: 30%;
+    background-color: #d6dbcf;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin: 10px;
+}
+
+.btn-comprar:hover{
+    background-color: #9cf163;
 }
