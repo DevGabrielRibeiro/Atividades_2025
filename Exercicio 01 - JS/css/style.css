@@ -1,0 +1,26 @@
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do header */
+header {
+    background-color: #353535;
+}
+
+header .logo {
+    width: 100px;
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #343a40;
+}
+
+/* Ajustes nos ícones das redes sociais */
+section a img {
+    width: 40px;
+    margin: 0 10px;
+}
