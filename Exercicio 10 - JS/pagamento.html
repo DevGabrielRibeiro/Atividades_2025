@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forma de Pagamento - CARSHOP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script> <!-- Correção: Incluindo o JS corretamente -->
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html">
+                <img src="images/logo.png" alt="Logo">CARSHOP</a>
+        </div>
+    </header>
+
+    <div class="container-pagamento">
+        <h2 class="titulo-pagamento">Escolha a forma de pagamento</h2>
+
+        <div class="opcoes-pagamento">
+            <button id="pix" class="btn-primary">Pix</button>
+            <button id="cartao" class="btn-primary">Cartão de Crédito/Débito</button>
+        </div>
+
+        <!-- Formulário de Cartão de Crédito/Débito -->
+        <div id="form-cartao" class="form-pagamento" style="display:none;">
+            <h3>Pagamento com Cartão de Crédito/Débito</h3>
+            <form action="" method="POST">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="numero-cartao">Número do cartão</label>
+                <input type="text" id="numero-cartao" name="numero-cartao" required><br><br>
+
+                <label for="validade">Validade</label>
+                <input type="text" id="validade" name="validade" placeholder="MM/AA" required><br><br>
+
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" name="cvc" required><br><br>
+
+                <button onclick="confirmarPagamento()" type="submit" class="btn-comprar" id="btn-confirmar-pagamento">Finalizar pagamento</button>
+            </form>
+        </div>
+
+        <!-- QR Code para Pix -->
+        <div id="qrcode-pix" class="form-pagamento" style="display:none;">
+            <h3>Pagamento via Pix</h3>
+            <p>Escaneie o QR Code abaixo para realizar o pagamento via Pix:</p>
+            <img src="images/qrcode.png" alt="QR Code Pix" class="qrcode-img"> <!-- Substitua pelo QR Code real -->
+            <p>Após o pagamento, clique no botão abaixo para confirmar:</p>
+            <button onclick="confirmarPagamento()" id="btn-confirmar-pagamento" class="btn-comprar">Confirmar pagamento</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("pix").onclick = function() {
+            document.getElementById("qrcode-pix").style.display = "block";
+            document.getElementById("form-cartao").style.display = "none";
+        };
+
+        document.getElementById("cartao").onclick = function() {
+            document.getElementById("form-cartao").style.display = "block";
+            document.getElementById("qrcode-pix").style.display = "none";
+        };
+    </script>
+</body>
+
+</html>
